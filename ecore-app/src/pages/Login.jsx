@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
+import BrandLogo from "../components/BrandLogo";
 
 export default function Login() {
   const { login, isAuthenticated, user } = useApp();
@@ -33,7 +34,7 @@ export default function Login() {
       <div className="login-glow"></div>
       <div className="login-box">
         <div className="login-logo">
-          <span className="mark"></span>EnglishCore
+          <BrandLogo className="brand-logo" />
         </div>
         <h1>Iniciar sesión</h1>
         <p className="sub">Accedé a tu cuenta de EnglishCore</p>

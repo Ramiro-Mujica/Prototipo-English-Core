@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import { EXAM_QUESTIONS, levelLabelFromScore } from "../data/examQuestions";
+import BrandLogo from "../components/BrandLogo";
 
 export default function ExamResult() {
   const { logout, examAttempts, attemptsRemaining, canAttemptExam, startNewAttempt } = useApp();
@@ -28,7 +29,7 @@ export default function ExamResult() {
     <>
       <div className="topbar">
         <div className="brand">
-          <span className="mark"></span>EnglishCore
+          <BrandLogo className="brand-logo" />
         </div>
         <div></div>
         <button className="logout-btn" onClick={logout}>Cerrar sesión</button>

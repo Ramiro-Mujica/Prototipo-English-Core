@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import Icon from "../components/Icon";
+import BrandLogo from "../components/BrandLogo";
 
 export default function ExamIntro() {
   const { user, logout, attemptsUsed, attemptsRemaining, canAttemptExam } = useApp();
@@ -10,13 +11,13 @@ export default function ExamIntro() {
     <>
       <div className="topbar">
         <div className="brand">
-          <span className="mark"></span>EnglishCore
+          <BrandLogo className="brand-logo" />
         </div>
         <div></div>
         <button className="logout-btn" onClick={logout}>Cerrar sesión</button>
       </div>
       <div className="exam-intro">
-        <div className="mark" style={{ width: 54, height: 54, borderRadius: 16, margin: "0 auto 24px" }}></div>
+        <BrandLogo className="brand-logo exam-intro-logo" />
         <h1>¡Bienvenido, {user.name.split(" ")[0]}!</h1>
         <p>
           Antes de empezar a aprender, vamos a descubrir tu nivel real de inglés con un examen de

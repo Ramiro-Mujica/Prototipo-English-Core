@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useApp } from "../../context/AppContext";
 import Icon from "../../components/Icon";
+import BrandLogo from "../../components/BrandLogo";
 
 const NAV = [
   { to: "/admin", label: "Dashboard", icon: "home", end: true },
@@ -21,7 +22,8 @@ export default function AdminLayout() {
     <>
       <div className="topbar">
         <div className="brand">
-          <span className="mark"></span>EnglishCore Admin
+          <BrandLogo className="brand-logo" />
+          <span className="brand-admin-tag">Admin</span>
         </div>
         <div></div>
         <div className="topbar-user">
