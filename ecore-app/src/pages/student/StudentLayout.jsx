@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useApp } from "../../context/AppContext";
-import BrandLogo from "../../components/BrandLogo";
+import escudo from "../../img/escudo.png";
 
 const TABS = [
   { to: "/alumno", label: "Inicio", end: true },
@@ -17,7 +17,8 @@ export default function StudentLayout() {
     <>
       <div className="topbar">
         <div className="brand">
-          <BrandLogo className="brand-logo" />
+          <img src={escudo} alt="Escudo EnglishCore" className="brand-shield" />
+          <span>EnglishCore</span>
         </div>
         <div className="topbar-mid">
           {TABS.map((tab) => (

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import { EXAM_QUESTIONS } from "../data/examQuestions";
 import Icon from "../components/Icon";
-import BrandLogo from "../components/BrandLogo";
+import escudo from "../img/escudo.png";
 
 const EXAM_SECONDS = 45 * 60;
 
@@ -68,7 +68,8 @@ export default function Exam() {
     <div className="exam-shell">
       <div className="topbar">
         <div className="brand">
-          <BrandLogo className="brand-logo" />
+          <img src={escudo} alt="Escudo EnglishCore" className="brand-shield" />
+          <span>EnglishCore</span>
         </div>
         <div className="exam-timer">{formatTime(secondsLeft)}</div>
         <button className="logout-btn" onClick={logout}>Cerrar sesión</button>

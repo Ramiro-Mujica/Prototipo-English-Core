@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useApp } from "../context/AppContext";
 import Icon from "../components/Icon";
 import BrandLogo from "../components/BrandLogo";
+import escudo from "../img/escudo.png";
 
 export default function ExamIntro() {
   const { user, logout, attemptsUsed, attemptsRemaining, canAttemptExam } = useApp();
@@ -11,7 +12,8 @@ export default function ExamIntro() {
     <>
       <div className="topbar">
         <div className="brand">
-          <BrandLogo className="brand-logo" />
+          <img src={escudo} alt="Escudo EnglishCore" className="brand-shield" />
+          <span>EnglishCore</span>
         </div>
         <div></div>
         <button className="logout-btn" onClick={logout}>Cerrar sesión</button>

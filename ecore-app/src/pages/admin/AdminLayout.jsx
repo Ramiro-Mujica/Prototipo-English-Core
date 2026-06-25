@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useApp } from "../../context/AppContext";
 import Icon from "../../components/Icon";
-import BrandLogo from "../../components/BrandLogo";
+import escudo from "../../img/escudo.png";
 
 const NAV = [
   { to: "/admin", label: "Dashboard", icon: "home", end: true },
@@ -22,8 +22,8 @@ export default function AdminLayout() {
     <>
       <div className="topbar">
         <div className="brand">
-          <BrandLogo className="brand-logo" />
-          <span className="brand-admin-tag">Admin</span>
+          <img src={escudo} alt="Escudo EnglishCore" className="brand-shield" />
+          <span>EnglishCore</span>
         </div>
         <div></div>
         <div className="topbar-user">
